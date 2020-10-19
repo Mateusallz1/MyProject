@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artigos</title>
+    </head>
+    <body>
+        <h1>Listar Artigos</h1>
+        <ul>
+            {% for artigo in artigos %}
+                <p>{{artigo.data_pub}}</p>
+                <p>{{artigo.titulo}}</p>
+                <p>{{artigo.conteudo}}</p>
+                <p>{{artigo.reporter.name}}</p>
+            {% endfor %}
+        </ul>
+    
+        <a href="{% url 'add_artigo' %}">Adicionar artigo</a>
+    </form>
+    </body>
+</html>
