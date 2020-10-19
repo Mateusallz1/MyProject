@@ -24,6 +24,26 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+TITLE_CHOICES = (
+    ('MR', 'Mr.'),
+    ('MRS', 'Mrs.'),
+    ('MS', 'Ms.'),
+)
+class Autor(models.Model):
+    nome = models.CharField(max_length=100)
+    titulo = models.CharField(max_length=3, choices=TITLE_CHOICES)
+    dt_nasc = models.DateField(blank=True, null=True)
+    
+    def __str__(self):
+        return self.nome
+
+class Livro(models.Model):
+    nome = models.CharField(max_length=100)
+    autores = models.ManyToManyField(Autor)
+    
+    def __str__(self):
+        return self.nome
+
 '''
 class Usuario(models.Model):
     id = models.AutoField(primary_key=True)

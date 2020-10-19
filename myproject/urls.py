@@ -23,8 +23,11 @@ urlpatterns = [
     path('add_post/', views.add_post, name='add_post'),
     path('add_reporter/', views.add_reporter, name='add_reporter'),
     path('add_artigo/', views.add_artigo, name='add_artigo'),
+    path('add_autor/', views.add_autor, name='add_autor'),
+    path('add_livro/', views.add_livro, name='add_livro'),
     path('list_posts/', views.list_posts, name='list_posts'),
     path('list_reporters/', views.list_reporters, name='list_reporters'),
     path('list_artigos/', views.list_artigos, name='list_artigos'),
+    path('list_livros/', views.list_livros, name='list_livros'),
 
 ]

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Autores</title>
+    </head>
+    <body>
+        <h1>Listar Autores</h1>
+        <ul>
+            {%for autor in autores %}
+                <p>{{autor.nome}}</p>
+                <p>{{autor.titulo}}</p>
+                <p>{{autor.dt_nasc}}</p>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'add_autor' %}">Adicionar reporter</a>
+    </form>
+    </body>
+</html>

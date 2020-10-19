@@ -23,3 +23,20 @@ class ArtigoForm(ModelForm):
                 }
             )
         }
+
+class AutorForm(ModelForm):
+    class Meta:
+        model = Autor
+        fields = "__all__"
+        widgets = {
+            'dt_nasc': forms.DateInput(
+                attrs={
+                    'type': 'date',
+            }
+        )
+    }
+
+class LivroForm(ModelForm):
+    class Meta:
+        model = Livro
+        fields = '__all__'
